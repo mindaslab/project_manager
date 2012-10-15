@@ -1,0 +1,24 @@
+<h2> Tasks </h2>
+
+<% @project.tasks.each do |task| %>
+  <p>
+    <b>Title:</b>
+    <%= task.title %>
+  </p>
+ 
+  <p>
+    <b>Description:</b>
+    <%= task.description %>
+  </p>
+
+  <p>
+    <b> Completion_date </b>
+    <%= task.completion_date %>
+  </p>
+  <p>
+  <%= link_to 'Destroy Comment', [task.project, task],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>
+
+<% end %>
